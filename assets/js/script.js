@@ -14,15 +14,31 @@ const quizQuestions = [{
 
 /* Declaration of variables */
 const quiz = document.getElementById('quiz');
-const 
+const question = document.getElementById('question');
+const optionA = document.getElementById('optionA');
+const optionB = document.getElementById('optionB');
+const optionC = document.getElementById('optionC');
+const optionD = document.getElementById('optionD');
+const next = document.getElementById('next');
+let score = parseInt(score.innerText);
+let result = 0;
+let maxQuizQuestions = 8;
+let presentQuestion;
 
 //Wait for the DOM to finish loading before running the game
 //Add event listners to mouse clicks
 
 document.addEventListener("DOMContentLoaded", function() {
-    button.addEventListener("click", runQuiz, {
-        once: true
-    })
+    let buttons = document.getElementsByTagName("button");
+    
+    for (let button of buttons) {
+        button.addEventListener("click", function(){
+            if (this.getAttribute("data-type") === "next") {
+                checkAnswer();
+            }
+        })
+    }
+    
     runQuiz();
 })
 
@@ -38,11 +54,16 @@ function runQuiz () {
 }
 
 function nextQuestion () {
-    
+    presentQuestion = quizQuestions[Math.floor(Math.random() * quizQuestions.length)];
+    if (quizQuestions < maxQuizQuestions) {
+        playQuiz()
+    } else {
+
+    }
 }
 
 function checkAnswer () {
-    
+    let answer = 
 }
 
 function incrementScore () {
