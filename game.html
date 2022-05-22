@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Pop Culture Quiz</title>
+</head>
+<body>
+    <div>
+        <!-- Container for quiz questions and answers -->
+        <div class="game-area">
+            <div class="question-area" id="quiz">
+                Questions go here
+            </div>
+            <div class="option-area">
+                <button class="option" id="optionA">OptionA</button>>
+                <button class="option" id="optionB">OptionB</button>>
+                <button class="option" id="optionC">OptionC</button>>
+                <button class="option" id="optionD">OptionD</button>>
+            </div>
+            <div class="answer-area">Answer</div>
+        </div>
+
+        <!-- Container for user score -->
+        <div class="score-area">
+            <p class="scores">Correct<span id="score"></span></p>
+            <p class="scores">Incorrect<span id="incorrect"></span></p>
+        </div>
+
+        <!-- Next question button -->
+        <button id="next">Next Question</button>
+
+    </div>
+
+    <!-- JS and font awesome-->
+    <script src="assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/db2ad12391.js" crossorigin="anonymous"></script>
+</body>
+</html>
