@@ -12,25 +12,41 @@
         <!-- Container for quiz questions and answers -->
         <div class="game-area">
             <div class="question-area" id="question">
-                Questions go here
+                <h2>Questions go here</h2>
             </div>
             <div class="option-area">
-                <button class="btn answer-btn btn-a" id="optionA">OptionA</button>>
-                <button class="btn answer-btn btn-b" id="optionB">OptionB</button>>
-                <button class="btn answer-btn btn-c" id="optionC">OptionC</button>>
-                <button class="btn answer-btn btn-d" id="optionD">OptionD</button>>
+                <ul>
+                    <li>
+                        <input type="radio" name="answer" id="a" class="answer">
+                        <label for="a" id="a_text">Answer</label>
+                    </li>
+
+                    <li>
+                        <input type="radio" name="answer" id="b" class="answer">
+                        <label for="b" id="b_text">Answer</label>
+                    </li>
+
+                    <li>
+                        <input type="radio" name="answer" id="c" class="answer">
+                        <label for="c" id="c_text">Answer</label>
+                    </li>
+
+                    <li>
+                        <input type="radio" name="answer" id="d" class="answer">
+                        <label for="d" id="d_text">Answer</label>
+                    </li>
+                </ul>
             </div>
-            <div class="answer-area" id="answer-box">Answer</div>
         </div>
+
+         <!-- Submit button -->
+        <button id="submit">Submit</button>
 
         <!-- Container for user score -->
         <div class="score-area">
             <p class="scores">Correct<span id="score"></span></p>
             <p class="scores">Incorrect<span id="incorrect"></span></p>
         </div>
-
-        <!-- Next question button -->
-        <button id="next">Next Question</button>
 
     </div>
 

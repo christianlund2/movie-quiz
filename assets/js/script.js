@@ -8,9 +8,12 @@ const quizQuestions = [{
 },
 {
     question:
-}
+},
+{
+    question:
+},
 
-]
+];
 
 /* Declaration of variables */
 const quiz = document.getElementById('quiz');
@@ -63,7 +66,7 @@ function nextQuestion () {
 }
 
 function checkAnswer () {
-    let answer = 
+
 }
 
 function incrementScore () {

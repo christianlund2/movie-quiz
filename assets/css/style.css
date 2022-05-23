@@ -1,8 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
 body {
     background: grey;
     font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
     font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.game-area {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+    width: 600px;
+    overflow: hidden;
+}
+
+.question-area {
+    padding: 2rem;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    float: left;
+    padding-left: 1rem;
+}
+
+ul li {
+    font-size: 1.05rem;
+    margin: 1rem 0;
+}
+
+ul li label {
+    cursor: pointer;
+}
+
+button {
+    background-color: cyan;
+    color: white;
+    border: 2px solid black;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.05rem;
+}
+
+button:hover {
+    background-color: darkcyan;
 }
