@@ -81,6 +81,28 @@ function getSelected() {
     return answer
 }
 
+/* Event listener for submit button */
+submitBtn.addEventListener('click', () => {
+    const answer = getSelected()
+    if(answer) {
+        if (answer ===quizQuestions[currentQuiz].correct) {
+            score++
+        }
+
+        currentQuiz++
+
+        if(currentQuiz < quizQuestions.length) {
+            runQuiz()
+        } else {
+            quiz.innerHTML = `
+            <h2>You answered ${score}/${quizQuestions.length} questions correct!</h2>
+
+            <button onclick="location.reload()">Reload</button>
+            `
+        }
+    }
+})
+
 function nextQuestion () {
     presentQuestion = quizQuestions[Math.floor(Math.random() * quizQuestions.length)];
     if (quizQuestions < maxQuizQuestions) {
