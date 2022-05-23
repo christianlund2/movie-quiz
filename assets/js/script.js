@@ -1,18 +1,83 @@
 const quizQuestions = [{
-    question: "When was the first Ford Model-T made?",
-    a: "1900",
-    b: "1910",
-    c: "1908",
-    d: "1912",
+    question: "Which artist has the most Grammy awards?",
+    a: "Beyonce",
+    b: "Quincy Jones",
+    c: "Georg Solti",
+    d: "Stevie Wonder",
     answer: "c",
 },
 {
-    question:
+    question: "Which actor has the most appearances as James Bond?",
+    a:"Daniel Craig",
+    b:"Pierce Brosnan",
+    c:"Roger Moore",
+    d:"Timothy Dalton",
+    answer:"c",
 },
 {
-    question:
+    question:"What is the name of the van in Scooby Doo?",
+    a:"Big Bertha",
+    b:"Big Diesel",
+    c:"Party Wagon",
+    d:"The Mystery Machine",
+    answer:"d",
 },
-
+{
+    question:"In which year did SpongeBob SquarePants first air?",
+    a:"1998",
+    b:"1999",
+    c:"2000",
+    d:"2001",
+    answer:"b",
+},
+{
+    question:"What is the name of the boat in Jaws?",
+    a:"The Jewel",
+    b:"Queen Anne's Revenge",
+    c:"The Orca",
+    d:"The Flying Dutchman",
+    answer:"c",
+},
+{
+    question:"How many studio albums did Elvis Presley release?",
+    a:"18",
+    b:"21",
+    c:"23",
+    d:"25",
+    answer:"c",
+},
+{
+    question:"What city was the second 'Home Alone' movie set in?",
+    a:"New York",
+    b:"Boston",
+    c:"Chicago",
+    d:"Baltimore",
+    answer:"a",
+},
+{
+    question:"Who was the lead singer of the band Queen?",
+    a:"Freddy Mercury",
+    b:"Johnny Drama",
+    c:"Hans Gruber",
+    d:"Buffalo Bill",
+    answer:"a",
+},
+{
+    question:"What is the name of the dog in 'How the Grinch stole Christmas?'",
+    a:"Skip",
+    b:"Dog",
+    c:"Max",
+    d:"Spike",
+    answer:"c",
+},
+{
+    question:"While fighting Darth Vader in the Cloud City, which hand does Luke Skywalker lose?",
+    a:"Right",
+    b:"Left",
+    c:"Both",
+    d:"Neither",
+    answer:"a",
+},
 ];
 
 /* Declaration of variables */
@@ -26,7 +91,7 @@ const d_text = document.getElementById('d_text');
 const submitBtn = document.getElementById('submit');
 
 let result = 0;
-let maxQuizQuestions = 8;
+let maxQuizQuestions = 10;
 let presentQuestion;
 
 let currentQuiz = 0;
@@ -114,10 +179,6 @@ function nextQuestion () {
 
 function checkAnswer () {
 
-}
-
-function incrementScore () {
-    
 }
 
 function showResult () {
