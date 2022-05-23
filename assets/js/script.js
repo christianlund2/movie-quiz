@@ -17,16 +17,22 @@ const quizQuestions = [{
 
 /* Declaration of variables */
 const quiz = document.getElementById('quiz');
-const question = document.getElementById('question');
-const optionA = document.getElementById('optionA');
-const optionB = document.getElementById('optionB');
-const optionC = document.getElementById('optionC');
-const optionD = document.getElementById('optionD');
-const next = document.getElementById('next');
-let score = parseInt(score.innerText);
+const answerElements = document.querySelectorAll('.answer');
+const questionElement = document.getElementById('question');
+const a_text = document.getElementById('a_text');
+const b_text = document.getElementById('b_text');
+const c_text = document.getElementById('c_text');
+const d_text = document.getElementById('d_text');
+const submitBtn = document.getElementById('submit');
+
 let result = 0;
 let maxQuizQuestions = 8;
 let presentQuestion;
+
+let currentQuiz = 0;
+let score = 0;
+
+runQuiz()
 
 //Wait for the DOM to finish loading before running the game
 //Add event listners to mouse clicks
@@ -46,14 +52,33 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 function runQuiz () {
-    let mixItUp = quizQuestions.sort(() => Math.random() - 0.5);
-    nextQuestion();
+    deselectAnswers()
 
-    questionElement.innerText = quizQuestions.question
-    optionA.innerText = quizQuestions.a
-    optionB.innerText = quizQuestions.b
-    optionC.innerText = quizQuestions.c
-    optionD.innerText = quizQuestions.d
+    const currentQuizQuestions = quizQuestions[currentQuiz]
+    
+    //*let mixItUp = quizQuestions.sort(() => Math.random() - 0.5);
+    //*nextQuestion();
+
+    questionElement.innerText = currentQuizQuestions.question
+    a_text.innerText = quizQuestions.a
+    b_text.innerText = quizQuestions.b
+    c_text.innerText = quizQuestions.c
+    d_text.innerText = quizQuestions.d
+}
+
+function deselectAnswers() {
+    answerElements.forEach(answerElements => answerElements.checked = false);
+}
+
+function getSelected() {
+    let answerElements
+    answerElements.forEach(answerElements => {
+        if(answerElements.checked) {
+            answer = answerElements.id
+        }
+    
+    })
+    return answer
 }
 
 function nextQuestion () {
