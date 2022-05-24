@@ -1,83 +1,83 @@
-const quizQuestions = [
+const quizData = [
     {
         question: "Which artist has the most Grammy awards?",
         a: "Beyonce",
         b: "Quincy Jones",
         c: "Georg Solti",
         d: "Stevie Wonder",
-        answer: "c",
+        correct: "c",
     },
     {
         question: "Which actor has the most appearances as James Bond?",
-        a:"Daniel Craig",
-        b:"Pierce Brosnan",
-        c:"Roger Moore",
-        d:"Timothy Dalton",
-        answer:"c",
+        a: "Daniel Craig",
+        b: "Pierce Brosnan",
+        c: "Roger Moore",
+        d: "Timothy Dalton",
+        correct: "c",
     },
     {
-        question:"What is the name of the van in Scooby Doo?",
-        a:"Big Bertha",
-        b:"Big Diesel",
-        c:"Party Wagon",
-        d:"The Mystery Machine",
-        answer:"d",
+        question: "What is the name of the van in Scooby Doo?",
+        a: "Big Bertha",
+        b: "Big Diesel",
+        c: "Party Wagon",
+        d: "The Mystery Machine",
+        correct: "d",
     },
     {
-        question:"In which year did SpongeBob SquarePants first air?",
-        a:"1998",
-        b:"1999",
-        c:"2000",
-        d:"2001",
-        answer:"b",
+        question: "In which year did SpongeBob SquarePants first air?",
+        a: "1998",
+        b: "1999",
+        c: "2000",
+        d: "2001",
+        correct: "b",
     },
     {
-        question:"What is the name of the boat in Jaws?",
-        a:"The Jewel",
-        b:"Queen Anne's Revenge",
-        c:"The Orca",
-        d:"The Flying Dutchman",
-        answer:"c",
+        question: "What is the name of the boat in Jaws?",
+        a: "The Jewel",
+        b: "Queen Anne's Revenge",
+        c: "The Orca",
+        d: "The Flying Dutchman",
+        correct: "c",
     },
     {
-        question:"How many studio albums did Elvis Presley release?",
-        a:"18",
-        b:"21",
-        c:"23",
-        d:"25",
-        answer:"c",
+        question: "How many studio albums did Elvis Presley release?",
+        a: "18",
+        b: "21",
+        c: "23",
+        d: "25",
+        correct: "c",
     },
     {
-        question:"What city was the second 'Home Alone' movie set in?",
-        a:"New York",
-        b:"Boston",
-        c:"Chicago",
-        d:"Baltimore",
-        answer:"a",
+        question: "What city was the second 'Home Alone' movie set in?",
+        a: "New York",
+        b: "Boston",
+        c: "Chicago",
+        d: "Baltimore",
+        correct: "a",
     },
     {
-        question:"Who was the lead singer of the band Queen?",
-        a:"Freddy Mercury",
-        b:"Johnny Drama",
-        c:"Hans Gruber",
-        d:"Buffalo Bill",
-        answer:"a",
+        question: "Who was the lead singer of the band Queen?",
+        a: "Freddy Mercury",
+        b: "Johnny Drama",
+        c: "Hans Gruber",
+        d: "Buffalo Bill",
+        correct: "a",
     },
     {
-        question:"What is the name of the dog in 'How the Grinch stole Christmas?'",
-        a:"Skip",
-        b:"Dog",
-        c:"Max",
-        d:"Spike",
-        answer:"c",
+        question: "What is the name of the dog in 'How the Grinch stole Christmas?'",
+        a: "Skip",
+        b: "Dog",
+        c: "Max",
+        d: "Spike",
+        correct: "c",
     },
     {
-        question:"While fighting Darth Vader in the Cloud City, which hand does Luke Skywalker lose?",
-        a:"Right",
-        b:"Left",
-        c:"Both",
-        d:"Neither",
-        answer:"a",
+        question: "While fighting Darth Vader in the Cloud City, which hand does Luke Skywalker lose?",
+        a: "Right",
+        b: "Left",
+        c: "Both",
+        d: "Neither",
+        correct: "a",
     },
 ];
 
@@ -117,19 +117,19 @@ document.addEventListener("DOMContentLoaded", function() {
     runQuiz();
 })
 
-function runQuiz () {
+function runQuiz() {
     deselectAnswers()
 
-    const currentQuizQuestions = quizQuestions[currentQuiz]
+    const currentQuizData = quizData[currentQuiz]
     
     //*let mixItUp = quizQuestions.sort(() => Math.random() - 0.5);
     //*nextQuestion();
 
-    questionElement.innerText = currentQuizQuestions.question
-    a_text.innerText = currentquizQuestions.a
-    b_text.innerText = currentquizQuestions.b
-    c_text.innerText = currentquizQuestions.c
-    d_text.innerText = currentquizQuestions.d
+    questionElement.innerText = currentQuizData.question
+    a_text.innerText = currentQuizData.a
+    b_text.innerText = currentQuizData.b
+    c_text.innerText = currentQuizData.c
+    d_text.innerText = currentQuizData.d
 }
 
 function deselectAnswers() {
@@ -150,17 +150,17 @@ function getSelected() {
 submitBtn.addEventListener('click', () => {
     const answer = getSelected()
     if(answer) {
-        if(answer ===quizQuestions[currentQuiz].correct) {
+        if(answer === quizData[currentQuiz].correct) {
             score++
         }
 
         currentQuiz++
 
-        if(currentQuiz < quizQuestions.length) {
+        if(currentQuiz < quizData.length) {
             runQuiz()
         } else {
             quiz.innerHTML = `
-            <h2>You answered ${score}/${quizQuestions.length} questions correct!</h2>
+            <h2>You answered ${score}/${quizData.length} questions correct!</h2>
 
             <button onclick="location.reload()">Reload</button>
             `
