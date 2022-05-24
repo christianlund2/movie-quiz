@@ -29,8 +29,9 @@ body {
 }
 
 .question-area {
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: center;
+    border-bottom: 2px solid black;
 }
 
 #question {
@@ -40,13 +41,14 @@ body {
 ul {
     list-style: none;
     padding: 0;
-    float: left;
-    padding-left: 1rem;
+    /*float: left;
+    padding-left: 1rem;*/
 }
 
 ul li {
     font-size: 1.05rem;
     margin: 1rem 0;
+    font-weight: 500;
 }
 
 ul li label {
@@ -64,9 +66,18 @@ button {
     font-family: inherit;
     font-weight: bolder;
     border-radius: 8px;
+    padding: 4px;
 }
 
 button:hover {
     background-color: darkcyan;
     color: white;
+}
+
+.score-area {
+    background-color: white;
+    width: 35%;
+    border: 2px solid black;
+    margin: auto;
+    padding: 4px;
 }
