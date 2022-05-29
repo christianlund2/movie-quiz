@@ -92,13 +92,12 @@ const d_text = document.getElementById('d_text');
 const submitBtn = document.getElementById('submit');
 
 let result = 0;
-let maxQuizQuestions = 10;
-let presentQuestion;
 
 let currentQuiz = 0;
-let score = 0;
+var score = 0;
+var incorrect = 0;
 
-runQuiz()
+runQuiz();
 
 //Wait for the DOM to finish loading before running the game
 //Add event listners to mouse clicks
@@ -111,25 +110,22 @@ document.addEventListener("DOMContentLoaded", function() {
             if (this.getAttribute("data-type") === "next") {
                 checkAnswer();
             }
-        })
+        });
     }
     
     runQuiz();
-})
+});
 
 function runQuiz() {
     deselectAnswers()
 
-    const currentQuizData = quizData[currentQuiz]
-    
-    //*let mixItUp = quizQuestions.sort(() => Math.random() - 0.5);
-    //*nextQuestion();
-
-    questionElement.innerText = currentQuizData.question
-    a_text.innerText = currentQuizData.a
-    b_text.innerText = currentQuizData.b
-    c_text.innerText = currentQuizData.c
-    d_text.innerText = currentQuizData.d
+    const currentQuizData = quizData[currentQuiz];
+   
+    questionElement.innerText = currentQuizData.question;
+    a_text.innerText = currentQuizData.a;
+    b_text.innerText = currentQuizData.b;
+    c_text.innerText = currentQuizData.c;
+    d_text.innerText = currentQuizData.d;
 }
 
 function deselectAnswers() {
@@ -137,42 +133,49 @@ function deselectAnswers() {
 }
 
 function getSelected() {
-    let answer
+    let answer;
     answerElements.forEach(answerElement => {
         if(answerElement.checked) {
-            answer = answerElement.id
+            answer = answerElement.id;
         }
-    })
-    return answer
+    });
+    return answer;
 }
 
 /* Event listener for submit button */
 submitBtn.addEventListener('click', () => {
-    const answer = getSelected()
+    const answer = getSelected();
     if(answer) {
         if(answer === quizData[currentQuiz].correct) {
-            score++
+            incrementScore();
+        } else {
+            incrementWrongAnswer();
         }
 
-        currentQuiz++
+        currentQuiz++;
 
         if(currentQuiz < quizData.length) {
-            runQuiz()
+            runQuiz();
         } else {
             quiz.innerHTML = `
             <h2>You answered ${score}/${quizData.length} questions correct!</h2>
 
             <button onclick="location.reload()">Reload</button>
-            `
+            `;
         }
     }
-})
+});
 
-function nextQuestion () {
-    presentQuestion = quizQuestions[Math.floor(Math.random() * quizQuestions.length)];
-    if (quizQuestions < maxQuizQuestions) {
-        playQuiz()
-    } else {
+/* Gets the current score from the DOM and increments it by 1 */
+function incrementScore() {
+    
+    this.score++;
+    document.getElementById("score").innerText = this.score;
+}
 
-    }
+/* Gets the current incorrect score from the DOM and increments it by 1 */
+function incrementWrongAnswer() {
+
+    this.incorrect++;
+    document.getElementById("incorrect").innerText = this.incorrect;
 }
