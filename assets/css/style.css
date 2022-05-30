@@ -115,41 +115,7 @@ button {
     padding: 8px;
 }
 
-/* --------- Media queries */
-@media screen and (max-width: 1920px) {
-  .quiz-container {
-    height: 80%;
-    width: 100%;
-    margin: auto;
-  }
-
-  .options-area {
-    width: 75%;
-    margin: auto;
-  }
-
-  button {
-    margin: 10px auto;
-    width: 25%;
-    height: 25%;
-  }
-
-  .question-area {
-    padding: 10px 0;
-    margin: 8px;
-  }
-
-  .score-area {
-      width: 50%;
-      margin: 15px auto;
-  }
-
-  .scores {
-      margin: auto;
-      display: block;
-      padding: 5px;
-  }
-}
+/* Media queries */
 
 @media screen and (max-width: 1200px) {
   .quiz-container {
@@ -158,6 +124,11 @@ button {
     margin: auto;
   }
 
+  .question-area {
+    padding: 10px 0;
+    margin: 8px;
+  }
+
   .options-area {
     width: 75%;
     margin: auto;
@@ -165,53 +136,14 @@ button {
 
   button {
     margin: 10px auto;
-    width: 25%;
+    width: 50%;
     height: 25%;
-  }
-
-  .question-area {
-    padding: 10px 0;
-    margin: 8px;
   }
 
   .score-area {
       width: 50%;
-      margin: 15px auto;
-  }
-
-  .scores {
       margin: auto;
-      display: block;
-      padding: 5px;
-  }
-}
-
-@media screen and (max-width: 950px) {
-  .quiz-container {
-    height: 80%;
-    width: 100%;
-    margin: auto;
-  }
-
-  .options-area {
-    width: 75%;
-    margin: auto;
-  }
-
-  button {
-    margin: 10px auto;
-    width: 25%;
-    height: 25%;
-  }
-
-  .question-area {
-    padding: 10px 0;
-    margin: 8px;
-  }
-
-  .score-area {
-      width: 50%;
-      margin: 15px auto;
+      padding: 0;
   }
 
   .scores {
@@ -228,6 +160,11 @@ button {
     margin: auto;
   }
 
+  .question-area {
+    padding: 10px 0;
+    margin: 8px;
+  }
+
   .options-area {
     width: 75%;
     margin: auto;
@@ -237,11 +174,6 @@ button {
     margin: 10px auto;
     width: 25%;
     height: 25%;
-  }
-
-  .question-area {
-    padding: 10px 0;
-    margin: 8px;
   }
 
   .score-area {
@@ -256,7 +188,7 @@ button {
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .quiz-container {
     height: 60%;
     width: 100%;
@@ -274,6 +206,13 @@ button {
     height: 25%;
   }
 
+  button:after {
+    border-radius: 8px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+  }
+
   .question-area {
     padding: 10px 0;
     margin: 4px;
@@ -289,25 +228,4 @@ button {
       display: block;
       padding: 5px;
   }
-}
-
-/* @media (max-width: 320px) {
-  .quiz-container {
-      height: 60%;
-  }
-
-  .options-area {
-      width: 75%;
-      margin: auto;
-  }
-
-  button {
-      margin: auto;
-      width: 25%;
-      height: 25%;
-  }
-  .question-area {
-      padding: 10px 0;
-  }
-
 }
