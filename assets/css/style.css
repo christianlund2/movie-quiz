@@ -120,6 +120,7 @@ button {
     height: 80%;
     width: 100%;
     margin: auto;
+    padding: 50px;
   }
 
   .question-area {
@@ -138,9 +139,17 @@ button {
     height: 25%;
   }
 
+  button:after {	
+    height: 32px;	
+    border-radius: 8px ;	
+    transform: translate(8px, 8px);	
+    transition: transform .2s ease-out;	
+    z-index: -1;	
+  }	
+
   .score-area {
       width: 50%;
-      margin: auto;
+      margin: 25px auto;
       padding: 0;
   }
 
@@ -175,9 +184,17 @@ button {
     height: 25%;
   }
 
+  button:after {	
+    height: 32px;	
+    border-radius: 8px ;	
+    transform: translate(8px, 8px);	
+    transition: transform .2s ease-out;	
+    z-index: -1;	
+  }	
+
   .score-area {
       width: 50%;
-      margin: 15px auto;
+      margin: 25px auto;
   }
 
   .scores {
@@ -190,7 +207,7 @@ button {
 @media screen and (max-width: 480px) {
   .quiz-container {
     height: 60%;
-    width: 100%;
+    width: 90%;
     margin: auto;
   }
 
