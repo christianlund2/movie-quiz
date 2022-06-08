@@ -41,8 +41,6 @@ body {
 ul {
     list-style: none;
     padding: 0;
-    /*float: left;
-    padding-left: 1rem;*/
 }
 
 ul li {
@@ -64,7 +62,7 @@ button {
     color: #111;
     cursor: pointer;
     display: flex;
-    font-family: Inter,sans-serif;
+    font-family: 'Roboto Condensed',sans-serif;
     font-size: 16px;
     height: 48px;
     justify-content: center;
@@ -207,7 +205,8 @@ button {
   }
 
   button:after {
-    border-radius: 8px;
+    height: 32px;
+    border-radius: 8px ;
     transform: translate(8px, 8px);
     transition: transform .2s ease-out;
     z-index: -1;
@@ -220,7 +219,7 @@ button {
 
   .score-area {
       width: 50%;
-      margin: 15px auto;
+      margin: 25px auto;
   }
 
   .scores {

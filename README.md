@@ -1,108 +1,100 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The Fantasy Fanatics
 
-Welcome christianlund,
+The Very Varied Quiz is an online quiz designed to test your knowledge of Pop Culture! It covers a variety of subjects and mediums including Television, Film and Music. For each question the user is given four answer choices to select from.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+A link to the deployed site can be found [here](https://christianlund2.github.io/very-varied-quiz/).
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![Responsive Preview](./assets/images/responsive-preview.png)
 
-## Gitpod Reminders
+## User Experience
+### User Goals
+### Design
+#### Color Palette
+#### Font
+#### Information Architecture
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Features
+1
 
-`python3 -m http.server`
+### Existing Features
+1 Navigation Bar 
+- Part 1
 
-A blue button should appear to click: _Make Public_,
+![Header and Navigation Image](./assets/images/header-and-navigation-image.png)
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+2 Example
+- A bit of text
 
-A blue button should appear to click: _Make Public_,
+![Landing/Hero Image](./assets/images/landing-hero-image.png)
 
-Another blue button should appear to click: _Open Browser_.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+3 Example
+- A bit of text
 
-To log into the Heroku toolbelt CLI:
+![Featured Article Image](./assets/images/featured-article-image.png)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Features Left to Implement
+- A bit of text
+- A future feature
 
-------
+## Testing
+- This project was built in Google Chrome, mostly in GitPod but also some from previous work in CodePen (cited below). It was tested in Microsoft Edge, Firefox and Safari browsers and on mobile phones, laptops and desktop monitors. 
+- The fixed header and NAV elements all work as intended, jumping to the correct section of the webpge.
+- The quiz interactions all work (10/10 for Star Wars *is* the correct answer).
+- The links to social media open in a new tab to the correct web address.  
+- Also, when running Lighthouse, the SEO comes back limited due to links not being crawlable. But the links are from the font-awesome script and in JavaScript, which is outside of the current scope of this project.
+- Accessibility needed to be improved on the 'Submit' button on the quiz. This was solved by increasing the font-weight from 'bold' to 800.
 
-## Release History
+- Lighthouse Desktop
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+![Lighthouse Desktop Image](./assets/images/lighthouse-desktop.png)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- Lighthouse Mobile
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+![Lighthouse Mobile Image](./assets/images/lighthouse-mobile.png)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### HTML Errors returned during validator testing: 
+- Erros go here
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### CSS Errors returned during validator testing: 
+- More errors here
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### Validator Testing
+1 HTML
+- No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fchristianlund2.github.io%2Ffantasy-fanatics%2F).
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+2 CSS
+- No errors were returned when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fchristianlund2.github.io%2Ffantasy-fanatics%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en).
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+3 JS 
+ - Text
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### Unfixed Bugs
+- No unfixed bugs remain.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Deployment
+1 This site was deployed to GitHub pages. 
+- In the "fantasy-fanatics" repository, click on the "Settings" tab.
+- Under "Code and Automation", select the "Pages" section.
+- Under Source, change from "Branch: None" to "Branch: Main" and click "Save".
+- After a few minutes, a banner appears confirming the site is published with a live link. 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### How to make a clone
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Credits
+### Content
+1 Sources 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+2 More sources
+- here
+- and here
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+3 Probably a stackoverflow link
 
-------
+4 wow!
 
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+### Media
+1 Favicon url

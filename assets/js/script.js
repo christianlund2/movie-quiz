@@ -97,8 +97,6 @@ let currentQuiz = 0;
 var score = 0;
 var incorrect = 0;
 
-runQuiz();
-
 //Wait for the DOM to finish loading before running the game
 //Add event listners to mouse clicks
 
@@ -117,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function runQuiz() {
-    deselectAnswers()
+    deselectAnswers();
 
     const currentQuizData = quizData[currentQuiz];
    
@@ -160,8 +158,7 @@ submitBtn.addEventListener('click', () => {
             quiz.innerHTML = `
             <h2>You answered ${score}/${quizData.length} questions correct!</h2>
 
-            <button onclick="location.reload()">Reload</button>
-            `;
+            <button onclick="location.reload()">Reload</button>`;
         }
     }
 });
