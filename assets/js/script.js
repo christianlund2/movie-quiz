@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 const quizData = [
     {
         question: "Which artist has the most Grammy awards?",
@@ -91,27 +92,14 @@ const c_text = document.getElementById('c_text');
 const d_text = document.getElementById('d_text');
 const submitBtn = document.getElementById('submit');
 
-let result = 0;
-
 let currentQuiz = 0;
 var score = 0;
 var incorrect = 0;
 
 //Wait for the DOM to finish loading before running the game
-//Add event listners to mouse clicks
 
 document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
-    
-    for (let button of buttons) {
-        button.addEventListener("click", function(){
-            if (this.getAttribute("data-type") === "next") {
-                checkAnswer();
-            }
-        });
-    }
-    
-    runQuiz();
+     runQuiz();
 });
 
 function runQuiz() {
