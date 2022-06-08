@@ -14,7 +14,7 @@ A link to the deployed site can be found [here](https://christianlund2.github.io
 * As a first time user, I want my final score to be displayed and have the option to play again.
 
 ### Returning Users
-* As a returning user, I want to improve my previous high score.
+* As a returning user, I want to improve my previous high score and see what new questions have been added to the quiz.
 
 ## Design
 
@@ -31,73 +31,85 @@ A link to the deployed site can be found [here](https://christianlund2.github.io
 ## Features
 * Home Page - The first page the user encounters when the website loads. The introductory heading is easily understood and coaxes the user to play the quiz. The play button initiates the quiz. 
 
-![Home Page Image](./assets/images/)
+![Home Page Image](./assets/images/home-page.png)
 
 * Game Page - After clicking on the 'Play!' button, the user is taken to the quiz page where the game is played. The text is easy to read and the button has a pseudo effect when hovered over and also when clicked. The score area increments after each user submission. 
 
-![Game Page Image](./assets/images/)
+![Game Page Image](./assets/images/game-page.png)
 
 * Results Page - After completing the quiz, the user is informed how many questions they answered correctly. They can reload the quiz to play again, or submit their score to the user leaderboard (future feature, see below).
 
-![Results Page Image](./assets/images/)
+![Results Page Image](./assets/images/results-page.png)
 
-### Features Left to Implement
-* A future feature I would like to add is a 'User Leaderboard' where the highest scores are displayed. This would change by quiz, by month or by all-time. 
+## Features Left to Implement
+* A future feature I would like to add is a 'User Leaderboard' where the highest scores are displayed. This could be filtered by quiz, by month or by all-time. 
 
 ## Testing
 * This project was primarily built in Google Chrome but also in Firefox. It was tested in Microsoft Edge, Firefox and Safari browsers and on mobile phones, laptops and desktop monitors. 
 * The 'Play', 'Submit', and 'Reload' buttons all work as intended, moving to the next page or question.
-* Also, when running Lighthouse, the SEO comes back limited due to links not being crawlable. But the links are from the font-awesome script and in JavaScript, which is outside of the current scope of this project.
-* Accessibility needed to be improved on the 'Submit' button on the quiz. This was solved by increasing the font-weight from 'bold' to 800.
+* When running Lighthouse for Desktop, the SEO comes back limited due to links not being crawlable. But the links are from third parties and not from my own code. 
+* When running Lighthouse for Mobile, the performance was limited but was remedied by removing the fontawesome script from the index and game html files. 
 
-* Lighthouse Desktop
+* Lighthouse Desktop - Index Page
 
-![Lighthouse Desktop Image](./assets/images/lighthouse-desktop.png)
+![Lighthouse Desktop Index Image](./assets/images/lighthouse-index-desktop.png)
 
-* Lighthouse Mobile
+* Lighthouse Desktop - Game Page
 
-![Lighthouse Mobile Image](./assets/images/lighthouse-mobile.png)
+![Lighthouse Desktop Game Image](./assets/images/lighthouse-game-desktop.png)
 
-### HTML Errors returned during validator testing: 
-* Erros go here
+* Lighthouse Mobile - Index Page
 
-### CSS Errors returned during validator testing: 
-* More errors here
+![Lighthouse Mobile Index Image](./assets/images/lighthouse-index-mobile.png)
+
+* Lighthouse Mobile - Game Page
+
+![Lighthouse Mobile Game Image](./assets/images/lighthouse-game-mobile.png)
 
 ### Validator Testing
-1 HTML
-* No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fchristianlund2.github.io%2Ffantasy-fanatics%2F).
+HTML
+* No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fchristianlund2.github.io%2Fvery-varied-quiz%2Fgame.html).
 
-2 CSS
-* No errors were returned when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fchristianlund2.github.io%2Ffantasy-fanatics%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en).
+CSS
+* No errors were returned when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fchristianlund2.github.io%2Fvery-varied-quiz%2Fgame.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en).
 
-3 JS 
-* Text
+JavaScript 
+* When run through JShint I had a lot of missing semi-colons. There were variables that I named or intended to use when wireframing that were not used and later removed. JShint was also giving me warnings when I used const for variables, this was fixed by adding '/*jshint esversion: 6 */' to the top of my js file. 
 
 ### Unfixed Bugs
-* No unfixed bugs remain.
+* At random intervals I get a 'Browser is not defined' error, but I sturggle to consistently duplicate it across browsers and devices. 
+* My favicon shows on the tab in port 8000 preview on GitPod but not on the deployed site on Github. 
 
 ## Deployment
-1 This site was deployed to GitHub pages. 
-* In the "fantasy-fanatics" repository, click on the "Settings" tab.
+1. This site was deployed to GitHub pages. 
+* In the "very-varied-quiz" repository, click on the "Settings" tab.
 * Under "Code and Automation", select the "Pages" section.
 * Under Source, change from "Branch: None" to "Branch: Main" and click "Save".
 * After a few minutes, a banner appears confirming the site is published with a live link. 
 
 ### How to make a clone
-
+* While in your repository, click the code button.
+* You will have three options, Clone, Download or Open with Github Desktop. 
+* Clone the repository using HTTPS by clicking on the copy button. Then copy the given URL.
+* You can then either launch the Gitpod workspace or choose your own directory.
+* Open Git Bash.
+* Type git clone and then paste the URL of the cloned repository.
+* Press Enter, to create your local clone to your chosen directory.
 
 ## Credits
-### Content
-1 Sources 
 
-2 More sources
-* here
-* and here
+1. Love Maths Project - An obvious help. Although I didn't make a game, the foundations were very helpful. 
 
-3 Probably a stackoverflow link
+2. Youtube: Web Dev Simplified - "Build a Quiz App with Javascript" - This was a great resource for this project. I went through this video multiple times. Great for starting with the basics.
 
-4 wow!
+3. Youtube: Coding with Nick - "Create a Quiz App using HTML CSS & JavaScript" - This was another solid video. He explains a bit more about why things are set in a particular way. 
+
+4. Lots of StackOverflow threads. Too many to count.
+
+5. Reddit, specifically r/learnjavascript and r/learnprogramming. I didn't really use any code there but more just for different ideas on problem solving and thinking outside the box. 
+
+6. Credit to my mentor for providing guidance on best practice tips.
 
 ### Media
-1 Favicon url
+1. Favicon: https://github.com/twitter/twemoji/blob/master/assets/svg/1f916.svg
+2. Button sourced from: https://getcssscan.com/css-buttons-examples - number 56.
